@@ -24,7 +24,7 @@
 
 	<!-- 把标记了@Controller注解的类转换为bean -->
 	<context:component-scan
-		base-package="com.kjt.service.soj,com.kjt.service.soj.web.controller"
+		base-package="com.luffy.self.account.controller"
 		use-default-filters="false">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -52,9 +52,9 @@
 				static-field="com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL" />
 		</property>
 	</bean>
-	<mvc:interceptors>
+	<!-- <mvc:interceptors>
 		<bean class="com.kjt.service.common.web.interceptor.RequestIDInterceptor" />
-	</mvc:interceptors>
+	</mvc:interceptors> -->
 
 
 	<!-- 定义视图分解器 -->
@@ -80,9 +80,5 @@
 	<mvc:resources mapping="/js/**" location="/js/" />
 	<mvc:resources mapping="/static/**" location="/static/" />
 
-	<!-- 控制器异常处理 -->
-	<bean id="responseStatusBasicExceptionResolver"
-		class="com.kjt.service.common.web.spring.ResponseStatusBasicExceptionResolver" />
-	<import resource="classpath*:/META-INF/config/application-config.xml" />
 
 </beans>
