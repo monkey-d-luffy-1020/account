@@ -12,7 +12,6 @@
 	<properties>
 		<jetty.port>8888</jetty.port>
 		<spring.version>4.0.9.RELEASE</spring.version>
-		<zookeeper.version>3.4.6</zookeeper.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 	</properties>
@@ -58,7 +57,7 @@
 			<version>1.8.4</version>
 		</dependency>
 		<!-- json 处理 -->
-<!-- 		<dependency>
+        <!-- 		<dependency>
 			<groupId>com.fasterxml.jackson</groupId>
 			<artifactId>jackson-datatype-guava</artifactId>
 			<version>1.9.2</version>
@@ -121,6 +120,32 @@
 			    <artifactId>logback-ext-spring</artifactId>
 			    <version>0.1.2</version>
 			</dependency>
+			
+		<!-- db依赖 -->		
+
+	    <dependency>
+	        <groupId>org.springframework.data</groupId>
+	        <artifactId>spring-data-mongodb</artifactId>
+	        <version>1.7.0.RELEASE</version>
+	    </dependency>
+
+
+
+    <dependency>  
+        <groupId>org.mongodb</groupId>  
+        <artifactId>mongo-java-driver</artifactId>  
+        <version>2.10.1</version>  
+        <type>jar</type>  
+        <scope>compile</scope>  
+    </dependency> 
+    
+        <dependency>  
+        <groupId>org.springframework.data</groupId>  
+        <artifactId>spring-data-mongodb-cross-store</artifactId>  
+        <version>1.2.1.RELEASE</version>  
+        <type>jar</type>  
+        <scope>compile</scope>  
+    </dependency>  
            
 	</dependencies>
 

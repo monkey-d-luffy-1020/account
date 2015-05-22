@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+<appender name="SOJSERVICE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./data1/logs/soj/dlog.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>./data1/logs/soj/dlog.log-%d{yyyy-MM-dd}</FileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<!-- %-40(%-35logger{35}:%-4line) -->
+			<Pattern>%msg%n</Pattern>
+		</encoder>
+	</appender>
+
+
+	<logger name="com.kjt.service.soj.SojService" level="ALL"  >
+		<appender-ref ref="SOJSERVICE" />
+	</logger>
+	
+	<root level="TRACE">
+
+	    
+	</root> 
+</configuration>
